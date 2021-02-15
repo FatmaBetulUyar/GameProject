@@ -27,17 +27,17 @@ namespace GameProject
 
            
             
-            Order sale1 = new Order();
-            sale1.GameID = 1;
-            sale1.GameName = "Sims";
-            sale1.Price = 100;
+            Order order1 = new Order();
+            order1.GameID = 1;
+            order1.GameName = "Sims";
+            order1.Price = 100;
 
-            OrderManager salesManager = new OrderManager();
-            salesManager.Sell(player1, sale1);
+            OrderManager orderManager = new OrderManager();
+            orderManager.Sell(player1, order1);
 
 
             ICampaign campaign1 = new WelcomeCampaign();
-            campaign1.AddCampaign(sale1);
+            campaign1.AddCampaign(order1);
         }
     }
 }

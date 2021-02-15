@@ -17,7 +17,7 @@ namespace GameProject
         {
             if (validationService.Validation(player)==true)
             {
-                 Console.WriteLine(player.Name+" Doğrulama başarılı. Sisteme kayıt olundu.");
+                 Console.WriteLine(player.Name+" Adlı kullanıcı için doğrulama başarılı. Sisteme kayıt olundu.");
             }
             else
             {
