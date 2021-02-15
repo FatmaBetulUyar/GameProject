@@ -4,8 +4,8 @@ using System.Text;
 
 namespace GameProject
 {
-    interface ILoggerService
+    interface IValidationService
     {
-        void Log(Player player);
+        bool Validation(Player player);
     }
 }

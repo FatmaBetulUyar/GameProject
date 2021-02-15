@@ -4,11 +4,26 @@ using System.Text;
 
 namespace GameProject
 {
-    class PlayerManager
+    class PlayerManager:IPlayerService
     {
+        IValidationService validationService;
+
+        public PlayerManager(IValidationService validationService)
+        {
+            this.validationService = validationService;
+        }
+
         public void Register(Player player)
         {
-            Console.WriteLine(player.Name+" Sisteme kayıt olundu.");
+            if (validationService.Validation(player)==true)
+            {
+                 Console.WriteLine(player.Name+" Doğrulama başarılı. Sisteme kayıt olundu.");
+            }
+            else
+            {
+                Console.WriteLine(" Doğrulama başarısız.Sisteme kayıt olunamadı!");
+            }
+           
         }
         public void Update(Player player)
         {
@@ -18,6 +33,8 @@ namespace GameProject
         {
         Console.WriteLine(player.Name + " Silme işlemi gerçekleşti.");
         }
+
+       
     }
     
 }

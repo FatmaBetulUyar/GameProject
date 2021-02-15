@@ -4,9 +4,9 @@ using System.Text;
 
 namespace GameProject
 {
-    class SalesManager
+    class OrderManager
     {
-        public void Sell(Player player,Sales sales)
+        public void Sell(Player player,Order sales)
         {
             Console.WriteLine(sales.GameName+" oyunu "+player.Id+ " ID'li oyuncuya "+sales.Price+" tl'ye satıldı.");
         }

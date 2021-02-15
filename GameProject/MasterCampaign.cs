@@ -6,15 +6,15 @@ namespace GameProject
 {
     class MasterCampaign : ICampaign
     {
-        public void AddCampaign(Sales sales)
+        public void AddCampaign(Order sales)
         {
             Console.WriteLine("1000 puana gelen oyuncular için Master kampanyası eklendi.");
         }
-        public void DeleteCampaign(Sales sales)
+        public void DeleteCampaign(Order sales)
         {
             Console.WriteLine("Master kampanyası güncellendi.");
         }
-        public void UpdateCampaign(Sales sale)
+        public void UpdateCampaign(Order sale)
         {
             Console.WriteLine("Master kampanyası silindi");
         }

@@ -6,17 +6,17 @@ namespace GameProject
 {
     class WelcomeCampaign : ICampaign
     {
-        public void AddCampaign(Sales sales)
+        public void AddCampaign(Order sales)
         {
             Console.WriteLine("Yeni başlayan oyuncular için Welcome kampanyası eklendi.");
         }
 
-        public void DeleteCampaign(Sales sales)
+        public void DeleteCampaign(Order sales)
         {
             Console.WriteLine("Welcome kampanyası güncellendi.");
         }
 
-        public void UpdateCampaign(Sales sales)
+        public void UpdateCampaign(Order sales)
         {
             Console.WriteLine("Welcome kampanyası silindi");
         }

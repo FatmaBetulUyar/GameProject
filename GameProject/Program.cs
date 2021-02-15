@@ -12,26 +12,27 @@ namespace GameProject
             player1.TcNo = 123456789;
             player1.Name = "betul";
             player1.Surname = "uyar";
-            player1.BornDate=DateTime.Now;
+            player1.BirthYear=2000;
             player1.City = "Kocaeli";
             player1.Level = 19;
             player1.Point = 85;
             player1.Mail = "bet@gmail.com";
-
-            PlayerManager playerManager = new PlayerManager();
+            IValidationService loggerService = new ValidationManager();
+            PlayerManager playerManager = new PlayerManager(loggerService);
+           
+            loggerService.Validation(player1);
             playerManager.Register(player1);
             playerManager.Update(player1);
             playerManager.Delete(player1);
 
-            ILoggerService loggerService = new GovernmentLogger();
-            loggerService.Log(player1);
-
-            Sales sale1 = new Sales();
+           
+            
+            Order sale1 = new Order();
             sale1.GameID = 1;
             sale1.GameName = "Sims";
             sale1.Price = 100;
 
-            SalesManager salesManager = new SalesManager();
+            OrderManager salesManager = new OrderManager();
             salesManager.Sell(player1, sale1);
 
 
